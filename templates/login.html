@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2 class="mb-3"><i class="bi bi-camera-video"></i> Face Login</h2>
+    <p class="text-muted">Look at the camera, then click <strong>Start Login</strong> and blink naturally.</p>
+
+    <div class="row g-4">
+        <div class="col-md-7">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="ratio ratio-4x3 bg-black">
+                        <video id="video" autoplay playsinline muted></video>
+                    </div>
+                    <canvas id="canvas" style="display:none;"></canvas>
+
+                    <div class="d-flex gap-2 mt-3">
+                        <button id="startLogin" class="btn btn-success">
+                            <i class="bi bi-play-circle"></i> Start Login
+                        </button>
+                        <button id="retakeBtn" class="btn btn-outline-secondary" style="display:none;">
+                            <i class="bi bi-arrow-clockwise"></i> Retry
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Status</h5>
+                    <div id="msg" class="alert alert-secondary">Camera ready. Click Start Login to begin.</div>
+                    <div id="result" class="d-none">
+                        <p><strong>Name:</strong> <span id="resName">-</span></p>
+                        <p><strong>ID:</strong> <span id="resId">-</span></p>
+                        <p><strong>Confidence:</strong> <span id="resConf">-</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,41 @@
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+.card.shadow-sm {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08) !important;
+}
+
+video {
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#preview img {
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#msg .alert {
+    margin-bottom: 0;
+}
+
+.badge.fs-6 {
+    padding: 8px 14px;
+}
+
+/* Camera guide overlay */
+.ratio {
+    position: relative;
+}

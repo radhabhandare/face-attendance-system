@@ -1,0 +1,33 @@
+@"
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Data files (do NOT push user data)
+data/
+*.xlsx
+users.json
+*.json.tmp
+*.corrupt
+
+# Captured faces (privacy!)
+static/captures/
+face_attendance_captures/
+
+# System / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Flask
+instance/
+*.log
+"@ | Out-File -Encoding utf8 .gitignore
